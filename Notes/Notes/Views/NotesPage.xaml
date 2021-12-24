@@ -2,76 +2,158 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.NotesPage"
-             Title="Notes">
+             Title="Momo">
     <!-- Layout children vertically -->
-    <StackLayout Margin="1">
-        <!-- Layout children in two columns -->
-        <Grid Margin="5,5,5,5">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.1*" />
-                <ColumnDefinition Width="0.6*" />
-                <ColumnDefinition Width="0.15*" />
-                <ColumnDefinition Width="0.15*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40" />
-            </Grid.RowDefinitions>
-            <Image Source="search.png" />
-            <Entry Placeholder="Tìm kiếm" Grid.Column="1"/>
-            <Image Source="bell.png" Grid.Column="2" />
-            <Image Source="user.png" Grid.Column="3" />
-        </Grid>
-        <Grid Margin="5,5,5,5">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.25*" />
-                <ColumnDefinition Width="0.25*" />
-                <ColumnDefinition Width="0.25*" />
-                <ColumnDefinition Width="0.25*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="25" />
-                <RowDefinition Height="35" />
-            </Grid.RowDefinitions>        
+    <ScrollView>
+        <StackLayout Margin="1">
+            <!-- Layout children in two columns -->
+            <Grid Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*" />
+                    <ColumnDefinition Width="0.6*" />
+                    <ColumnDefinition Width="0.15*" />
+                    <ColumnDefinition Width="0.15*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Image Source="search.png" />
+                <Entry Placeholder="Tìm kiếm" Grid.Column="1"/>
+                <Image Source="bell.png" Grid.Column="2" />
+                <Image Source="user.png" Grid.Column="3" />
+            </Grid>
+            <Grid Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.25*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="35" />
+                </Grid.RowDefinitions>
                 <Image Source="payment.png" Grid.Row="0"  />
                 <Label Text="Nạp tiền " Grid.Row="1" Margin="20,1,1,1"/>
                 <Image Source="withdrawal.png" Grid.Row="0" Grid.Column="1" />
                 <Label Text="Rút tiền " Grid.Row="1" Grid.Column="1" Margin="20,1,1,1"/>
                 <Image Source="cvv.png" Grid.Row="0" Grid.Column="2"  />
-            <Label Text="Mã thanh &#10;    toán" Grid.Row="1" Grid.Column="2" Margin="20,1,1,1" />
+                <Label Text="Mã thanh &#10;    toán" Grid.Row="1" Grid.Column="2" Margin="20,1,1,1" />
                 <Image Source="qrcode.png" Grid.Row="0" Grid.Column="3" />
                 <Label Text="Quét mã" Grid.Row="1" Grid.Column="3" Margin="20,1,1,1"/>
-        </Grid>
+            </Grid>
 
-        <Grid Margin="5,0,5,5">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.4*" />
-                <ColumnDefinition Width="0.6*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="25" />
-                <RowDefinition Height="40" />
-            </Grid.RowDefinitions>
-            <Label Text="Ví của tôi" FontSize="18" Margin="5,5,0,0"/>
-            <Entry IsPassword="True" Grid.Row="1"/>
-            <Label Text="Quản lý tài khoản   > " Grid.Column="1" Grid.Row="1" Margin="105,-5,0,0"/>
-        </Grid>
+            <Grid Margin="5,0,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*" />
+                    <ColumnDefinition Width="0.6*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Label Text="Ví của tôi" FontSize="18" Margin="5,5,0,0"/>
+                <Entry IsPassword="True" Grid.Row="1"/>
+                <Label Text="Quản lý tài khoản   > " Grid.Column="1" Grid.Row="1" Margin="105,-5,0,0"/>
+            </Grid>
 
-        <Grid Margin="5,5,5,5">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.4*" />
-                <ColumnDefinition Width="0.6*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="35" />
-                <RowDefinition Height="40" />
-            </Grid.RowDefinitions>
-            <Label Text="Ví của tôi" FontSize="25" Margin="5,5,0,0" FontAttributes="Bold"/>
+            <Grid Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.65*" />
+                    <ColumnDefinition Width="0.35*" />
 
-        </Grid>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                <Label Text="Dịch vụ yêu thích " FontSize="20" Margin="5,5,0,0" FontAttributes="Bold"/>
+                <Button ImageSource="customize.png" Text="Tùy chỉnh" Margin="5,5,0,0"  Grid.Column="1" BackgroundColor="White" BorderWidth="1"          
+              BorderColor="gray" TextTransform="None">
 
-        
+                </Button>
+
+            </Grid>
+            <Grid Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+
+                <Image Source="dollar.png" />
+                <Label Text="Chuyển tiền" Grid.Row="1"/>
+                <Image Source="bank.png" Grid.Column="1" />
+                <Label Text="Chuyển tiền &#10;  ngân hàng" Grid.Row="1" Grid.Column="1"/>
+                <Image Source="bill.png" Grid.Column="2" />
+                <Label Text="Thanh toán &#10;   hóa đơn" Grid.Row="1" Grid.Column="2"/>
+                <Image Source="iphone.png" Grid.Column="3" />
+                <Label Text="Nạp tiền &#10;điện thoại" Grid.Row="1" Grid.Column="3"/>
+                <Image Source="banking.png" Grid.Column="4" />
+                <Label Text="Mua mã thẻ &#10;    di động" Grid.Row="1" Grid.Column="4"/>
+
+
+                <Image Source="wifi.png" Grid.Row="2" />
+                <Label Text="Data 3G/4G" Grid.Row="3"/>
+                <Image Source="runes.png" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Túi thần tài" Grid.Row="3" Grid.Column="1"/>
+
+                <Image Source="wallet1.png" Grid.Row="2" Grid.Column="2"/>
+                <Label Text="Ví trả sau" Grid.Row="3" Grid.Column="2"/>
+                <Image Source="payment_method.png" Grid.Row="2" Grid.Column="3"/>
+                <Label Text="Thanh toán khoản vay " Grid.Row="3" Grid.Column="3"/>
+                <Image Source="piggybank.png" Grid.Row="2" Grid.Column="4"/>
+                <Label Text="Túi thần tài" Grid.Row="3" Grid.Column="4"/>
+
+            </Grid>
+
+
+            <Grid Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.75*" />
+                    <ColumnDefinition Width="0.25*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Label Text="Momo đề xuất " FontSize="20" Margin="5,5,0,0" FontAttributes="Bold"/>
+                <Button ImageSource="grid.png" Text="Tất cả" Margin="5,5,0,0"  Grid.Column="1" BackgroundColor="White" BorderWidth="1"          
+              BorderColor="gray" TextTransform="None">
+
+                </Button>
+
+            </Grid>
+
+            <Grid Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.65*" />
+                    <ColumnDefinition Width="0.15*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" Grid.Column="1" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Image Source="dish.png"/>
+                <Label Text="Thổ địa &#10; Momo" Grid.Row="1" Margin="15,0,0,0"/>
+                <Image Source="momo.jpg" Grid.Column="1"/>
+                <Image Source="bulb.png" Grid.Column="2"/>
+                <Label Text="Thanh toán &#10;       điện" Grid.Column="2" Grid.Row="1" Margin="15,0,0,0"/>
+            </Grid>
 
 
 
-    </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+   
 </ContentPage>
