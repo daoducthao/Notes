@@ -140,7 +140,7 @@
 
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="80" Grid.Column="1" />
+                    <RowDefinition Height="40" />
                     <RowDefinition Height="40" />
                 </Grid.RowDefinitions>
                 <Image Source="dish.png"/>
